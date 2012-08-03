@@ -24,3 +24,5 @@ set copyindent
 
 set nobackup
 set noswapfile
+
+nmap ,/ :nohlsearch<CR>
