@@ -21,3 +21,6 @@ set scrolloff=2
 
 set autoindent
 set copyindent
+
+set nobackup
+set noswapfile
