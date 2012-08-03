@@ -16,3 +16,5 @@ set foldmethod=syntax
 
 set ignorecase
 set smartcase
+
+set scrolloff=2
