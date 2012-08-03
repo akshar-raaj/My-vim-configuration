@@ -18,3 +18,6 @@ set ignorecase
 set smartcase
 
 set scrolloff=2
+
+set autoindent
+set copyindent
