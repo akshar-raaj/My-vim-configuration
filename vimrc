@@ -9,3 +9,10 @@ set expandtab
 set incsearch
 
 set hlsearch
+
+set nrformats=
+
+set foldmethod=syntax
+
+set ignorecase
+set smartcase
