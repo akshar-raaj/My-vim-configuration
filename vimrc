@@ -33,18 +33,22 @@ set copyindent
 set nobackup
 set noswapfile
 
-nmap ,/ :nohlsearch<CR>
-
 " Vertical Split window will be created at right
 set splitright
 " Horizontal Split window will be created below the current one
 set splitbelow
 
-" While pasting a code snippet copied from the web, indentation is taken care of by this.
+" Vim forgets all smartness it has about indenting and just switches to paste
+" mode and doesn't apply any indentation of its own else it would have led to
+" cascading indentation.
 set pastetoggle=<F2>
 
 " Takes care of proper indentation in Python files. Should be working in other
 " languages as well.
 filetype plugin indent on
+
+" Mappings
+nmap ,/ :nohlsearch<CR>
+nnoremap ; :
 
 call pathogen#infect()
