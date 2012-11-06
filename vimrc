@@ -26,3 +26,8 @@ set nobackup
 set noswapfile
 
 nmap ,/ :nohlsearch<CR>
+
+set splitright
+set splitbelow
+
+set pastetoggle=<F2>
