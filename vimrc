@@ -43,4 +43,8 @@ set splitbelow
 " While pasting a code snippet copied from the web, indentation is taken care of by this.
 set pastetoggle=<F2>
 
+" Takes care of proper indentation in Python files. Should be working in other
+" languages as well.
+filetype plugin indent on
+
 call pathogen#infect()
