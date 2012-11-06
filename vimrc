@@ -56,4 +56,7 @@ map <C-h> <C-w>h
 map <C-l> <C-w>l
 map <C-j> <C-w>j
 map <C-k> <C-w>k
+
+"Enable neocomplcache
+let g:neocomplcache_enable_at_startup = 1
 call pathogen#infect()
