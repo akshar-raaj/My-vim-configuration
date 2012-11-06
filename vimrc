@@ -42,3 +42,5 @@ set splitbelow
 
 " While pasting a code snippet copied from the web, indentation is taken care of by this.
 set pastetoggle=<F2>
+
+call pathogen#infect()
