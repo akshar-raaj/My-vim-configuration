@@ -49,6 +49,11 @@ filetype plugin indent on
 
 " Mappings
 nmap ,/ :nohlsearch<CR>
+"Can use ; instead of <shift>:
 nnoremap ; :
-
+" To move between windows
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+map <C-j> <C-w>j
+map <C-k> <C-w>k
 call pathogen#infect()
