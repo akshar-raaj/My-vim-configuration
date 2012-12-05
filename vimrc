@@ -50,12 +50,17 @@ filetype plugin indent on
 " Mappings
 nmap ,/ :nohlsearch<CR>
 "Can use ; instead of <shift>:
-nnoremap ; :
+"But this led to problem when search for a character with 'f' and then moving
+"to the next occurence of character. So comment
+"nnoremap ; : 
 " To move between windows
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 map <C-j> <C-w>j
 map <C-k> <C-w>k
+
+set exrc            "Enable per directory .vimrc files
+set secure          "Disable unsafe commands in local .vimrc
 
 "Enable neocomplcache
 let g:neocomplcache_enable_at_startup = 1
