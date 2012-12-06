@@ -64,6 +64,8 @@ set secure          "Disable unsafe commands in local .vimrc
 
 nmap <C-d> ebdw
 
+let g:CommandTMaxHeight = 10
+
 "Enable neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 call pathogen#infect()
