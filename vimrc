@@ -66,6 +66,8 @@ nmap <C-d> ebdw
 
 let g:CommandTMaxHeight = 10
 
+let g:syntastic_python_checker = 'pyflakes'
+
 "Enable neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 call pathogen#infect()
