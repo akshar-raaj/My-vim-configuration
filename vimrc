@@ -68,6 +68,12 @@ let g:CommandTMaxHeight = 10
 
 let g:syntastic_python_checker = 'pyflakes'
 
+let g:Powerline_symbols = 'fancy'
+
+set laststatus=2
+set encoding=utf-8
+set t_Co=256
+
 "Enable neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 call pathogen#infect()
