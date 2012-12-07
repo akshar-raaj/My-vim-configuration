@@ -62,6 +62,7 @@ map <C-k> <C-w>k
 set exrc            "Enable per directory .vimrc files
 set secure          "Disable unsafe commands in local .vimrc
 
+
 nmap <C-d> ebdw
 
 let g:CommandTMaxHeight = 10
@@ -73,6 +74,8 @@ let g:Powerline_symbols = 'fancy'
 set laststatus=2
 set encoding=utf-8
 set t_Co=256
+
+colorscheme desert
 
 "Enable neocomplcache
 let g:neocomplcache_enable_at_startup = 1
