@@ -1,10 +1,9 @@
 set nocompatible
 
-set number
+set nonumber
 
 " Number of columns to use for tab
 set tabstop=4
-" Number of columns used by button >> and <<
 set shiftwidth=4
 " Tab key is treated as space
 set expandtab
@@ -75,7 +74,12 @@ set laststatus=2
 set encoding=utf-8
 set t_Co=256
 
-colorscheme desert
+colorscheme koehler
+
+"Set abbreviations
+abb ip import ipdb;ipdb.set_trace()
+
+:nmap <CR> o<Esc>
 
 "Enable neocomplcache
 let g:neocomplcache_enable_at_startup = 1
