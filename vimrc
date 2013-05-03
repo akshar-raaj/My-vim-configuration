@@ -80,6 +80,7 @@ colorscheme koehler
 abb ip import ipdb;ipdb.set_trace()
 
 :nmap <CR> o<Esc>
+:nmap Y y$
 
 "Enable neocomplcache
 let g:neocomplcache_enable_at_startup = 1
