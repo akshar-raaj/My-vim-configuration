@@ -1,6 +1,6 @@
 set nocompatible
 
-set nonumber
+set number
 
 " Number of columns to use for tab
 set tabstop=4
