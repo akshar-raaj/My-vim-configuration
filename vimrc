@@ -74,13 +74,19 @@ set laststatus=2
 set encoding=utf-8
 set t_Co=256
 
-colorscheme koehler
-
 "Set abbreviations
 abb ip import ipdb;ipdb.set_trace()
 
 :nmap <CR> o<Esc>
 :nmap Y y$
+
+syntax enable
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+colorscheme solarized
 
 "Enable neocomplcache
 let g:neocomplcache_enable_at_startup = 1
