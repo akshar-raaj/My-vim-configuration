@@ -80,6 +80,7 @@ abb ip import ipdb;ipdb.set_trace()
 :nmap <CR> o<Esc>
 :nmap Y y$
 
+"Added solarized theme
 syntax enable
 if has('gui_running')
     set background=light
@@ -87,6 +88,8 @@ else
     set background=dark
 endif
 colorscheme solarized
+
+:nmap ,t gt
 
 "Enable neocomplcache
 let g:neocomplcache_enable_at_startup = 1
