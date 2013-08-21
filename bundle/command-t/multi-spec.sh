@@ -2,11 +2,11 @@
 
 function build_quietly()
 {
-  cd ruby/command-t
-  ruby extconf.rb > /dev/null
-  make clean > /dev/null
-  make > /dev/null
-  cd -
+  (bundle install > /dev/null &&
+   cd ruby/command-t &&
+   ruby extconf.rb > /dev/null &&
+   make clean > /dev/null &&
+   make > /dev/null)
 }
 
 OLD_PATH=$PATH
@@ -15,7 +15,7 @@ for RUBY_VERSION in $(ls ~/.multiruby/install); do
   export PATH=~/.multiruby/install/$RUBY_VERSION/bin:$OLD_PATH
   build_quietly
   echo "$RUBY_VERSION: running spec suite"
-  rspec spec
+  bundle exec rspec spec
   echo "$RUBY_VERSION: finished"
 done
 

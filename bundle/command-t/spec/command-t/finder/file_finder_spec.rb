@@ -1,4 +1,4 @@
-# Copyright 2010 Wincent Colaiuta. All rights reserved.
+# Copyright 2010-2011 Wincent Colaiuta. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -21,13 +21,15 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-require File.expand_path('../spec_helper', File.dirname(__FILE__))
-require 'command-t/finder'
+require 'spec_helper'
+require 'command-t/finder/file_finder'
 
-describe CommandT::Finder do
+module VIM; end
+
+describe CommandT::FileFinder do
   before :all do
-    @finder = CommandT::Finder.new File.join(File.dirname(__FILE__), '..',
-      '..', 'fixtures')
+    @finder = CommandT::FileFinder.new File.join(File.dirname(__FILE__), '..',
+      '..', '..', 'fixtures')
     @all_fixtures = %w(
       bar/abc
       bar/xyz
@@ -41,36 +43,36 @@ describe CommandT::Finder do
 
   before do
     # scanner will call VIM's expand() function for exclusion filtering
-    stub(VIM).evaluate(/expand\(.+\)/) { '0' }
+    stub(::VIM).evaluate(/expand\(.+\)/) { '0' }
   end
 
   describe 'sorted_matches_for method' do
-    it 'should return an empty array when no matches' do
+    it 'returns an empty array when no matches' do
       @finder.sorted_matches_for('kung foo fighting').should == []
     end
 
-    it 'should return all files when query string is empty' do
+    it 'returns all files when query string is empty' do
       @finder.sorted_matches_for('').should == @all_fixtures
     end
 
-    it 'should return files in alphabetical order when query string is empty' do
+    it 'returns files in alphabetical order when query string is empty' do
       results = @finder.sorted_matches_for('')
       results.should == results.sort
     end
 
-    it 'should return matching files in score order' do
+    it 'returns matching files in score order' do
       @finder.sorted_matches_for('ba').
         should == %w(baz bar/abc bar/xyz foo/beta)
       @finder.sorted_matches_for('a').
         should == %w(baz bar/abc bar/xyz foo/alpha/t1 foo/alpha/t2 foo/beta)
     end
 
-    it 'should obey the :limit option for empty search strings' do
+    it 'obeys the :limit option for empty search strings' do
       @finder.sorted_matches_for('', :limit => 2).
         should == %w(bar/abc bar/xyz)
     end
 
-    it 'should obey the :limit option for non-empty search strings' do
+    it 'obeys the :limit option for non-empty search strings' do
       @finder.sorted_matches_for('a', :limit => 3).
         should == %w(baz bar/abc bar/xyz)
     end
