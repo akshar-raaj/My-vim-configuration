@@ -93,12 +93,16 @@ colorscheme solarized
 :nmap ,t gt
 :nmap ,T gT
 
+" Navigate to top and bottom of block
+:nmap tp [{
+:nmap bm ]}
+
 " Show/Hide hidden characters
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
 autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
-autocmd FileType html set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType html set tabstop=4|set shiftwidth=4|set expandtab
 autocmd FileType javascript set tabstop=4|set shiftwidth=4|set expandtab
 
 "Enable neocomplcache
