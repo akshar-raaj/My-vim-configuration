@@ -99,9 +99,14 @@ colorscheme solarized
 :nmap ,t gt
 :nmap ,T gT
 
-" Navigate to top and bottom of block
+" Navigate to top and bottom of block in js files
 :nmap tp [{
 :nmap bm ]}
+
+" Mapping of python-match.vim
+" Navigate to top and bottom of block
+:nmap hp [%
+:nmap hm ]%
 
 " Show/Hide hidden characters
 nmap <leader>l :set list!<CR>
