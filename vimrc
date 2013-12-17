@@ -87,6 +87,12 @@ if has('gui_running')
 else
     set background=dark
 endif
+let g:solarized_termtrans=1
+" Just found on some blog and added 
+" these solarized settings
+"let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 colorscheme solarized
 
 " Switch between tabs
