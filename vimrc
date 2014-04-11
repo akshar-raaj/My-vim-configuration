@@ -68,7 +68,11 @@ let g:CommandTMaxHeight = 10
 
 let g:syntastic_python_checker = 'pyflakes'
 
-let g:Powerline_symbols = 'fancy'
+" airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme             = 'powerlineish'
+let g:airline_enable_branch     = 1
+let g:airline_enable_syntastic  = 1
 
 set laststatus=2
 set encoding=utf-8
