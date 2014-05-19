@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/akshar/.vim/bundle/python_match.vim'
+let g:netrw_dirhist_2='/Users/akshar/.vim/bundle/python_match.vim/ftplugin'
+let g:netrw_dirhist_3='/Users/akshar/.vim/bundle/matchit.vim'
+let g:netrw_dirhist_4='/Users/akshar/.vim/bundle/matchit.vim/doc'
