@@ -104,6 +104,7 @@ colorscheme solarized
 :nmap ,T gT
 
 " Navigate to top and bottom of block in js files
+" Uses python_match.vim
 :nmap tp [{
 :nmap bm ]}
 
@@ -115,6 +116,10 @@ colorscheme solarized
 " Show/Hide hidden characters
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
 autocmd FileType html set tabstop=4|set shiftwidth=4|set expandtab
